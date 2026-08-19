@@ -1,0 +1,35 @@
+{
+  "name": "genpark-llm-distributed-trace-latency-bottleneck-detector-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Production LLM distributed trace analyzer & latency bottleneck pinpoint detector.",
+  "author": "genpark",
+  "category": "operations",
+  "tags": [
+    "trace-analyzer",
+    "latency-bottleneck",
+    "opentelemetry-llm",
+    "apm-profiler",
+    "ph-august-dev"
+  ],
+  "inputs": {
+    "distributed_trace_spans": {
+      "type": "array"
+    },
+    "sla_threshold_ms": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "bottleneck_span_id": {
+      "type": "string"
+    },
+    "latency_contribution_pct": {
+      "type": "number"
+    },
+    "optimization_advice": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
